@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_academy" model="ir.actions.act_window">
+        <field name="name">Supervisors</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">academy.record</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+    -<menuitem id="menu_academy_student"
+              name="Supervisors"
+              action="action_academy"
+              parent="menu_department_record"
+              sequence="10"/>
+</odoo>

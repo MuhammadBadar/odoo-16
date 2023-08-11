@@ -13,14 +13,15 @@
                         <field name="is_child"/>
                         <field name="gender"/>
                         <field name="doctor_id"/>
+                        <field name="tag_id" widget="many2many_tags"/>
 
 
                     </group>
                 </sheet>
-                <!-- <div class="oe_chatter">
+                 <div class="oe_chatter">
                      <field name="message_follower_ids"/>
                      <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
-                 </div>-->
+                 </div>
             </form>
         </field>
     </record>
@@ -49,5 +50,5 @@
               name="Faculty"
               parent="menu_hospital_root"
               sequence="10"/>
-
+    
 </odoo>

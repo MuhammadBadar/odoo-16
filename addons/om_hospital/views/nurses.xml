@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <record id="view_hospital_nurse_form" model="ir.ui.view">
+        <field name="name">hospital.nurses.form</field>
+        <field name="model">hospital.nurse</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="age"/>
+                        <field name="gender"/>
+                        <field name="patient_id"/>
+
+                    </group>
+                </sheet>
+                 <div class="oe_chatter">
+                     <field name="message_follower_ids"/>
+                     <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                 </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hospital_nurse_tree" model="ir.ui.view">
+        <field name="name">hospital.nurses.tree</field>
+        <field name="model">hospital.nurse</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="age"/>
+                <field name="patient_id"/>
+                <field name="gender"/>
+            </tree>
+        </field>
+    </record>
+     <record id="action_hospital_nurse" model="ir.actions.act_window">
+        <field name="name">Nurses</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hospital.nurse</field>
+        <field name="view_mode">tree,form</field>
+
+    </record>
+    <menuitem id="action_hospital_nurses"
+              name="Nurses"
+              parent="menu_hospital_faculty"
+              action="action_hospital_nurse"
+              sequence="10"/>
+</odoo>
